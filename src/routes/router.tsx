@@ -8,7 +8,7 @@ import {
   SearchPage,
   SignInPage,
 } from "../pages";
-import { ROUTE } from ".";
+import { ROUTE } from "./routes";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
