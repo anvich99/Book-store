@@ -1,5 +1,8 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
+import { InputStyle } from "./styled";
 
-export const Input = () => {
-  return <div>Input</div>;
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+
+export const Input = (props: InputProps) => {
+  return <InputStyle {...props} />;
 };
