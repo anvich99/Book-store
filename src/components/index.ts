@@ -7,5 +7,6 @@ import { Header } from "./Header/Header";
 import { Input } from "./Input/Input";
 import { CartItem } from "./CartItem/CartItem";
 import { CartList } from "./CartList/CartList";
+import { Title } from "./TitlePage/Title";
 
-export { BookItem, BooksList, Button, Form, Footer, Header, Input, CartItem, CartList };
+export { BookItem, BooksList, Button, Form, Footer, Header, Input, CartItem, CartList, Title };
