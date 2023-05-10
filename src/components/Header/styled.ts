@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { cart, heart, logo, search, user } from "../../assets";
+import { Colors } from "../../ui";
 
 const HeaderPage = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   padding: 24px 0px;
+  border-bottom: 1px solid ${Colors.LightGrey};
 `;
 const HeaderLogo = styled.a`
   width: 138px;
