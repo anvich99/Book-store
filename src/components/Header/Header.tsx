@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  HeaderCart,
-  HeaderHeart,
-  HeaderIcons,
-  HeaderLogo,
-  HeaderPage,
-  HeaderSearch,
-  HeaderUser,
-} from "./styled";
+import { HeaderCart, HeaderHeart, HeaderIcons, HeaderLogo, HeaderPage, HeaderUser } from "./styled";
 import { Input } from "../Input/Input";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../../routes";
