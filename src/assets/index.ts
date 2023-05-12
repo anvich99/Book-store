@@ -1,7 +1,7 @@
-import logo from "./images/Logo.svg";
-import cart from "./icons/Cart.svg";
-import heart from "./icons/Heart.svg";
-import user from "./icons/User.svg";
-import search from "./icons/Search.svg";
+import { ReactComponent as LogoIcon } from "./icons/logo.svg";
+import { ReactComponent as CartIcon } from "./icons/cart.svg";
+import { ReactComponent as HeartIcon } from "./icons/heart.svg";
+import { ReactComponent as UserIcon } from "./icons/user.svg";
+import { ReactComponent as SearchIcon } from "./icons/search.svg";
 
-export { logo, cart, heart, user, search };
+export { LogoIcon, CartIcon, HeartIcon, UserIcon, SearchIcon };

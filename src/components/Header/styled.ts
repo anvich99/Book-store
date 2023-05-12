@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { cart, heart, logo, search, user } from "../../assets";
+// import { cartIcon, heartIcon, searchIcon, userIcon } from "../../assets";
 import { Colors } from "../../ui";
 
 const HeaderPage = styled.header`
@@ -10,10 +10,10 @@ const HeaderPage = styled.header`
   padding: 24px 0px;
   border-bottom: 1px solid ${Colors.LightGrey};
 `;
-const HeaderLogo = styled.a`
+const HeaderLogo = styled.div`
   width: 138px;
   height: 29px;
-  background: url(${logo});
+  /* background: url(<logoIcon/>); */
   cursor: pointer;
 `;
 const HeaderIcons = styled.div`
@@ -21,32 +21,32 @@ const HeaderIcons = styled.div`
   gap: 40px;
   padding: 16px;
 `;
-const HeaderHeart = styled.div`
-  width: 24px;
-  height: 24px;
-  background: url(${heart});
-  background-repeat: no-repeat;
-  cursor: pointer;
-`;
-const HeaderCart = styled.div`
-  width: 24px;
-  height: 24px;
-  background: url(${cart});
-  background-repeat: no-repeat;
-  cursor: pointer;
-`;
-const HeaderUser = styled.div`
-  width: 24px;
-  height: 24px;
-  background: url(${user});
-  background-repeat: no-repeat;
-  cursor: pointer;
-`;
-const HeaderSearch = styled.div`
-  width: 24px;
-  height: 24px;
-  background: url(${search});
-  background-repeat: no-repeat;
-  cursor: pointer;
-`;
-export { HeaderPage, HeaderLogo, HeaderIcons, HeaderHeart, HeaderCart, HeaderUser, HeaderSearch };
+// const HeaderHeart = styled.div`
+//   width: 24px;
+//   height: 24px;
+//   background: url(<heartIcon/>);
+//   background-repeat: no-repeat;
+//   cursor: pointer;
+// `;
+// const HeaderCart = styled.div`
+//   width: 24px;
+//   height: 24px;
+//   background: url(<cartIcon/>);
+//   background-repeat: no-repeat;
+//   cursor: pointer;
+// `;
+// const HeaderUser = styled.div`
+//   width: 24px;
+//   height: 24px;
+//   background: url(<userIcon/>);
+//   background-repeat: no-repeat;
+//   cursor: pointer;
+// `;
+// const HeaderSearch = styled.div`
+//   width: 24px;
+//   height: 24px;
+//   background: url(<searchIcon>);
+//   background-repeat: no-repeat;
+//   cursor: pointer;
+// `;
+export { HeaderPage, HeaderLogo, HeaderIcons };
