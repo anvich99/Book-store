@@ -7,7 +7,7 @@ interface NewBooksState {
 }
 
 export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
-  const { data } = await axios.get("https://api.itbook.store/1.0/search/mongodb");
+  const { data } = await axios.get("https://api.itbook.store/1.0/new");
   return data.books;
 });
 
