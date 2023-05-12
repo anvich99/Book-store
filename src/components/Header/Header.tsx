@@ -1,8 +1,8 @@
 import React from "react";
 import { HeaderIcons, HeaderLogo, HeaderPage } from "./styled";
-import { Input } from "../Input/Input";
+import { Input } from "components";
 import { Link } from "react-router-dom";
-import { ROUTE } from "../../routes";
+import { ROUTE } from "routes";
 
 import { LogoIcon, HeartIcon, CartIcon, UserIcon } from "assets";
 
