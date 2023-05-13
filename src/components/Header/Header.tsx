@@ -9,9 +9,12 @@ import { LogoIcon, HeartIcon, CartIcon, UserIcon } from "assets";
 export const Header = () => {
   return (
     <HeaderPage>
-      <HeaderLogo>
-        <LogoIcon />
-      </HeaderLogo>
+      <Link to={ROUTE.MAIN}>
+        <HeaderLogo>
+          <LogoIcon />
+        </HeaderLogo>
+      </Link>
+
       <Input placeholder="Search"></Input>
       <HeaderIcons>
         <Link to={ROUTE.FAVORITES}>

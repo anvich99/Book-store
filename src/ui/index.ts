@@ -1,4 +1,4 @@
 import { Colors } from "./colors";
 import { GlobalStyles } from "./GlobalStyles";
-
-export { Colors, GlobalStyles };
+import { Container } from "templates/styles";
+export { Colors, GlobalStyles, Container };

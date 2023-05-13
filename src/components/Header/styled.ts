@@ -13,7 +13,6 @@ const HeaderPage = styled.header`
 const HeaderLogo = styled.div`
   width: 138px;
   height: 29px;
-  /* background: url(<logoIcon/>); */
   cursor: pointer;
 `;
 const HeaderIcons = styled.div`
@@ -21,32 +20,4 @@ const HeaderIcons = styled.div`
   gap: 40px;
   padding: 16px;
 `;
-// const HeaderHeart = styled.div`
-//   width: 24px;
-//   height: 24px;
-//   background: url(<heartIcon/>);
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// `;
-// const HeaderCart = styled.div`
-//   width: 24px;
-//   height: 24px;
-//   background: url(<cartIcon/>);
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// `;
-// const HeaderUser = styled.div`
-//   width: 24px;
-//   height: 24px;
-//   background: url(<userIcon/>);
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// `;
-// const HeaderSearch = styled.div`
-//   width: 24px;
-//   height: 24px;
-//   background: url(<searchIcon>);
-//   background-repeat: no-repeat;
-//   cursor: pointer;
-// `;
 export { HeaderPage, HeaderLogo, HeaderIcons };
