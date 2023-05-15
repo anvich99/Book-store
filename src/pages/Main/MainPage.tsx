@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Container } from "ui";
-import { BooksList, Title } from "components";
-import { addToCart, clearCart } from "store/features/cart/cartSlice";
-import { useAppDispatch, useAppSelector } from "store/hooks/hooks";
-import { selectCart } from "store/selectors/cartSelectors";
-import { fetchBooks } from "store/features/new/newBooks";
-import { selectNewBooks } from "store/selectors/newBooks";
+import { BookItem, BooksList, Title } from "components";
+import {
+  addToCart,
+  clearCart,
+  useAppDispatch,
+  useAppSelector,
+  selectCart,
+  fetchBooks,
+  selectNewBooks,
+} from "store";
 import { Template } from "templates";
 
 export const MainPage = () => {
@@ -26,17 +30,14 @@ export const MainPage = () => {
 
   return (
     <Container>
-      <Template />
-      <Title>New Releases Books</Title>
-      <BooksList>
-        {books.map((item) => {
-          return (
-            <li>
-              <img src={item.image} />
-            </li>
-          );
-        })}
-      </BooksList>
+      <Template>
+        <Title>New Releases Books</Title>
+        <BooksList>
+          {books.map((item) => {
+            return <BookItem book={item} />;
+          })}
+        </BooksList>
+      </Template>
     </Container>
   );
 };

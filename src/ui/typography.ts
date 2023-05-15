@@ -31,7 +31,6 @@ const HeadlineThree = css`
   color: ${Colors.Primary};
 `;
 const SublineTitle = css`
-  font-family: "Bebas Neue";
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;

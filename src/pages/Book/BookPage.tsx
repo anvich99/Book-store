@@ -9,8 +9,9 @@ interface BookPageProps {
 export const BookPage = () => {
   return (
     <Container>
-      <Template />
-      <Title>ff</Title>
+      <Template>
+        <Title>ff</Title>
+      </Template>
     </Container>
   );
 };

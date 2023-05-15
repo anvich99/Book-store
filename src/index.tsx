@@ -10,7 +10,7 @@ import { Normalize } from "styled-normalize";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <Provider store={store}>
-    <Normalize />
+    {/* <Normalize /> */}
     <GlobalStyles />
     <RouterProvider router={router} />
   </Provider>,

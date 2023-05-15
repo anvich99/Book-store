@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import { Colors } from "ui";
+import { Colors, reset } from "ui";
 
 export const GlobalStyles = createGlobalStyle`
-
+${reset}
 body{
   font-family: 'Bebas Neue', cursive;
   font-weight: 400;

@@ -6,8 +6,9 @@ import { Container } from "ui";
 export const FavoritesPage = () => {
   return (
     <Container>
-      <Template />
-      <Title>Favorites</Title>
+      <Template>
+        <Title>Favorites</Title>
+      </Template>
     </Container>
   );
 };

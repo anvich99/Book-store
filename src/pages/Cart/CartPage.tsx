@@ -6,8 +6,9 @@ import { Container } from "ui";
 export const CartPage = () => {
   return (
     <Container>
-      <Template />
-      <Title>Your cart</Title>
+      <Template>
+        <Title>Your cart</Title>
+      </Template>
     </Container>
   );
 };

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-// import { cartIcon, heartIcon, searchIcon, userIcon } from "../../assets";
-import { Colors } from "../../ui";
+import { Colors } from "ui";
 
 const HeaderPage = styled.header`
   display: flex;
