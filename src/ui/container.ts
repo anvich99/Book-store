@@ -5,4 +5,7 @@ const Container = styled.div`
   max-width: 1120px;
   width: 100%;
 `;
-export { Container };
+const Main = styled.main`
+  padding: 72px 0;
+`;
+export { Container, Main };

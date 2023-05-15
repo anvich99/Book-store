@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { HeadlineThree, SublineText } from "ui";
 
-const BookCard = styled.a`
+const BookCard = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 352px;
   width: 100%;
-  /* max-height: 450px; */
+  text-decoration: none;
   cursor: pointer;
 `;
 const ImageBackground = styled.div`

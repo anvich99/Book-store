@@ -1,6 +1,7 @@
+import { resetStyle } from "./reset";
 import { Colors } from "./colors";
 import { GlobalStyles } from "./GlobalStyles";
-import { Container } from "templates/styles";
+import { Container, Main } from "./container";
 import {
   HeadlineOne,
   HeadlineTwo,
@@ -9,13 +10,16 @@ import {
   SublineText,
   BodyPrimary,
   BodySecondary,
+  ButtonText,
 } from "./typography";
 import { MediaBreakpoints } from "./media";
-import { reset } from "./reset";
+
 export {
+  resetStyle,
   Colors,
   GlobalStyles,
   Container,
+  Main,
   HeadlineOne,
   HeadlineTwo,
   HeadlineThree,
@@ -24,5 +28,5 @@ export {
   SublineTitle,
   BodyPrimary,
   BodySecondary,
-  reset,
+  ButtonText,
 };

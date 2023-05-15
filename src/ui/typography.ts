@@ -61,6 +61,15 @@ const BodySecondary = css`
   line-height: 24px;
   color: ${Colors.Primary};
 `;
+const ButtonText = css`
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: ${Colors.White};
+`;
 export {
   HeadlineOne,
   HeadlineTwo,
@@ -69,4 +78,5 @@ export {
   SublineText,
   BodyPrimary,
   BodySecondary,
+  ButtonText,
 };
