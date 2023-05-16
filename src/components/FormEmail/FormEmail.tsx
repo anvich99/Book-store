@@ -1,5 +1,5 @@
 import React from "react";
-import { AddEmail, Subtitle, TitleForm } from "./styled";
+import { AddEmail, ButtonSubscribe, InputEmail, Subtitle, TitleForm } from "./styled";
 import { Button, Input } from "components";
 import { useForm } from "react-hook-form";
 
@@ -13,8 +13,8 @@ export const FormEmail = () => {
       <Subtitle>
         Be the first to know about new IT books, upcoming releases, exclusive offers and more.
       </Subtitle>
-      <Input placeholder="Your email" />
-      <Button type="submit">Subscribe</Button>
+      <InputEmail placeholder="Your email" />
+      <ButtonSubscribe type="submit">Subscribe</ButtonSubscribe>
     </AddEmail>
   );
 };
