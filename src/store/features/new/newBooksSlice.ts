@@ -6,8 +6,8 @@ interface NewBooksState extends NewBookAPI {
   isLoading: boolean;
 }
 
-export const fetchBooks = createAsyncThunk<NewBookAPI, undefined, { rejectValue: string }>(
-  "books/fetchBooks",
+export const fetchNewBooks = createAsyncThunk<NewBookAPI, undefined, { rejectValue: string }>(
+  "newBooks/fetchNewBooks",
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get("https://api.itbook.store/1.0/new");
@@ -27,19 +27,19 @@ const initialState: NewBooksState = {
 };
 
 const newBooksSlice = createSlice({
-  name: "books",
+  name: "newBooks",
   initialState,
   reducers: {},
   extraReducers(builder) {
-    builder.addCase(fetchBooks.pending, (state) => {
+    builder.addCase(fetchNewBooks.pending, (state) => {
       state.isLoading = true;
     });
-    builder.addCase(fetchBooks.fulfilled, (state, { payload }) => {
+    builder.addCase(fetchNewBooks.fulfilled, (state, { payload }) => {
       state.isLoading = false;
       state.books = payload.books;
       state.total = payload.total;
     });
-    builder.addCase(fetchBooks.rejected, (state, { payload }) => {
+    builder.addCase(fetchNewBooks.rejected, (state, { payload }) => {
       if (payload) {
         state.isLoading = false;
         state.error = payload;
