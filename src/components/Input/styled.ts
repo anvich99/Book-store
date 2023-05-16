@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const InputStyle = styled.input`
   max-width: 542px;
   width: 100%;

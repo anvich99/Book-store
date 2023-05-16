@@ -11,6 +11,7 @@ import { Title } from "./Title/Title";
 import { ErrorWindow } from "./ErrorWindow/Error";
 import { Spinner } from "./Spinner/Spinner";
 import { FormEmail } from "./FormEmail/FormEmail";
+import { SearchForm } from "./Search/SearchForm";
 export {
   BookItem,
   BooksList,
@@ -25,4 +26,5 @@ export {
   ErrorWindow,
   Spinner,
   FormEmail,
+  SearchForm,
 };

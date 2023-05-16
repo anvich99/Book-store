@@ -1,8 +1,7 @@
 import React from "react";
+import { ButtonHTMLAttributes } from "react";
 import { ButtonStyled } from "./styles";
-interface ButtonProps {
-  buttonName: string;
-}
-export const Button = ({ buttonName }: ButtonProps) => {
-  return <ButtonStyled>{buttonName}</ButtonStyled>;
+
+export const Button = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
+  return <ButtonStyled {...props}>{props.children}</ButtonStyled>;
 };

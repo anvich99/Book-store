@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors, HeadlineTwo, SublineText } from "ui";
 
-const AddEmail = styled.div`
+const AddEmail = styled.form`
   padding: 56px 64px;
   background-color: ${Colors.Purple};
 `;
