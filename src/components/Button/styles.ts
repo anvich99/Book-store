@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Colors, ButtonText } from "ui";
 
 const ButtonStyled = styled.button`
+  border: none;
   background-color: ${Colors.Primary};
   ${ButtonText}
   cursor: pointer;

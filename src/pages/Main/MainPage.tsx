@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BookItem, BooksList, Title } from "components";
+import { BookItem, BooksList, ErrorWindow, FormEmail, Spinner, Title } from "components";
 import {
   addToCart,
   clearCart,
@@ -10,8 +10,6 @@ import {
   selectNewBooks,
 } from "store";
 import { Template } from "templates";
-import { FormEmail } from "components/FormEmail/FormEmail";
-import { Spinner } from "components/Spinner/Spinner";
 
 export const MainPage = () => {
   const { books, isLoading, error } = useAppSelector(selectNewBooks);
@@ -32,6 +30,7 @@ export const MainPage = () => {
   return (
     <Template>
       {isLoading && <Spinner />}
+      {error && <ErrorWindow error={error} />}
       <Title>New Releases Books</Title>
       <BooksList>
         {books.map((item) => {

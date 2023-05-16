@@ -1,10 +1,10 @@
 interface NewBookAPI {
-  error: string;
+  error: string | null;
   total: string;
   books: NewBook[];
 }
 interface BookAPI {
-  error: string;
+  error: string | null;
   total: string;
   pages: string;
   books: Book[];
