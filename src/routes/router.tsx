@@ -1,10 +1,11 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+
 import {
+  MainPage,
   AccountPage,
   BookPage,
   CartPage,
   FavoritesPage,
-  MainPage,
   SearchPage,
   SignInPage,
 } from "pages";

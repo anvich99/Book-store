@@ -25,7 +25,7 @@ interface NewBook {
   rating?: string;
 }
 interface Book {
-  error: string;
+  error: string | null;
   title: string;
   subtitle: string;
   authors: string;
@@ -39,6 +39,6 @@ interface Book {
   price: string;
   image: string;
   url: string;
-  pdf?: {};
+  pdf?: {} | null;
 }
 export type { BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI };

@@ -7,9 +7,10 @@ import {
   BookPrice,
   BookTitle,
   ImageBackground,
-} from "./styles";
+} from "./styled";
 import { NewBook } from "types";
 import { ROUTE } from "routes/routes";
+import { generatePath } from "react-router-dom";
 
 interface BookItemProps {
   book: NewBook;
@@ -17,7 +18,7 @@ interface BookItemProps {
 
 export const BookItem = ({ book }: BookItemProps) => {
   return (
-    <BookCard to={ROUTE.BOOK}>
+    <BookCard to={generatePath(ROUTE.BOOK, { isbn13: book.isbn13 })}>
       <ImageBackground>
         <BookImage src={book.image} alt="book" />
       </ImageBackground>

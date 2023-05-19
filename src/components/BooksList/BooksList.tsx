@@ -1,4 +1,4 @@
-import { BooksContainer } from "./styles";
+import { BooksContainer } from "./styled";
 import { BookItem } from "components";
 import { NewBook } from "types";
 interface BookListProps {
