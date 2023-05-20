@@ -11,7 +11,9 @@ export const resetStyle = css`
   ol[class] {
     padding: 0;
   }
-
+  button {
+    padding: 0;
+  }
   /* Убираем внешние отступы */
   body,
   h1,

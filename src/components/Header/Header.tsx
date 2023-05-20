@@ -1,9 +1,8 @@
 import React from "react";
-import { HeaderIcons, HeaderLogo, HeaderPage } from "./styled";
-import { Input } from "components";
+import { HeaderLinks, HeaderLogo, HeaderPage } from "./styled";
+import { SearchForm } from "components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
-
 import { LogoIcon, HeartIcon, CartIcon, UserIcon } from "assets";
 
 export const Header = () => {
@@ -15,8 +14,8 @@ export const Header = () => {
         </HeaderLogo>
       </Link>
 
-      <Input placeholder="Search"></Input>
-      <HeaderIcons>
+      <SearchForm placeholder="Search" />
+      <HeaderLinks>
         <Link to={ROUTE.FAVORITES}>
           <HeartIcon />
         </Link>
@@ -26,7 +25,7 @@ export const Header = () => {
         <Link to={ROUTE.ACCOUNT}>
           <UserIcon />
         </Link>
-      </HeaderIcons>
+      </HeaderLinks>
     </HeaderPage>
   );
 };

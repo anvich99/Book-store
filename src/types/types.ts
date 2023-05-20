@@ -9,6 +9,12 @@ interface BookAPI {
   pages: string;
   books: Book[];
 }
+interface SearchBooksAPI {
+  error: string | null;
+  total: string;
+  page: string;
+  books: NewBook[];
+}
 interface NewBook {
   title: string;
   subtitle: string;
@@ -19,7 +25,7 @@ interface NewBook {
   rating?: string;
 }
 interface Book {
-  error: string;
+  error: string | null;
   title: string;
   subtitle: string;
   authors: string;
@@ -29,10 +35,11 @@ interface Book {
   pages: string;
   year: string;
   rating: string;
+  language: string;
   desc: string;
   price: string;
   image: string;
   url: string;
-  pdf?: {};
+  pdf?: {} | null;
 }
-export type { BookAPI, NewBook, NewBookAPI, Book };
+export type { BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI };

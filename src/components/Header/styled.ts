@@ -14,9 +14,29 @@ const HeaderLogo = styled.div`
   height: 29px;
   cursor: pointer;
 `;
-const HeaderIcons = styled.div`
+const HeaderLinks = styled.div`
   display: flex;
   gap: 40px;
   padding: 16px;
+  & > {
+    &:active {
+      svg {
+        fill: ${Colors.Primary};
+        path {
+          transition: 0.2s linear;
+          stroke: ${Colors.Red};
+        }
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          transition: 0.2s linear;
+          stroke: ${Colors.Red};
+        }
+      }
+    }
+  }
 `;
-export { HeaderPage, HeaderLogo, HeaderIcons };
+
+export { HeaderPage, HeaderLogo, HeaderLinks };
