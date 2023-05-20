@@ -61,6 +61,14 @@ const BodySecondary = css`
   line-height: 24px;
   color: ${Colors.Primary};
 `;
+const BodySecondaryNormal = css`
+  font-family: "Helios";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: ${Colors.Primary};
+`;
 const ButtonText = css`
   font-family: "Bebas Neue";
   font-style: normal;
@@ -79,4 +87,5 @@ export {
   BodyPrimary,
   BodySecondary,
   ButtonText,
+  BodySecondaryNormal,
 };

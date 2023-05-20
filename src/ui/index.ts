@@ -11,6 +11,7 @@ import {
   BodyPrimary,
   BodySecondary,
   ButtonText,
+  BodySecondaryNormal,
 } from "./typography";
 import { MediaBreakpoints } from "./media";
 
@@ -29,4 +30,5 @@ export {
   BodyPrimary,
   BodySecondary,
   ButtonText,
+  BodySecondaryNormal,
 };

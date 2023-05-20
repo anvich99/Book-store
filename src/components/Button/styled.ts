@@ -6,6 +6,13 @@ const StyledButton = styled.button`
   background-color: ${Colors.Primary};
   ${ButtonText}
   cursor: pointer;
+  &:hover {
+    transition: 0.2s linear;
+    background: ${Colors.PrimaryLight};
+  }
+  &:active {
+    background: ${Colors.PrimaryLight};
+  }
 `;
 
 export { StyledButton };

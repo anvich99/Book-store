@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { HeadlineThree, SublineText } from "ui";
+import { Colors, HeadlineThree, SublineText } from "ui";
 
 const BookCard = styled(Link)`
   display: flex;
@@ -10,6 +10,10 @@ const BookCard = styled(Link)`
   width: 100%;
   text-decoration: none;
   cursor: pointer;
+  &:hover {
+    /* transition: 0.3s linear;
+    border: 1px solid ${Colors.PrimaryLight}; */
+  }
 `;
 const ImageBackground = styled.div`
   display: flex;

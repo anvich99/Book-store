@@ -26,9 +26,29 @@ const Heart = styled.button`
   display: flex;
   max-width: 56px;
   padding: 16px;
-  background-color: ${Colors.Blue};
+  background-color: ${Colors.Primary};
   border: none;
   cursor: pointer;
+  svg {
+    path {
+      stroke: ${Colors.White};
+    }
+  }
+  :hover {
+    svg {
+      path {
+        stroke: ${Colors.Red};
+      }
+    }
+  }
+  :active {
+    svg {
+      fill: ${Colors.Red};
+      path {
+        stroke: ${Colors.Red};
+      }
+    }
+  }
 `;
 const CardInfo = styled.div`
   display: flex;

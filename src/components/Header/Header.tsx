@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderIcons, HeaderLogo, HeaderPage } from "./styled";
+import { HeaderLinks, HeaderLogo, HeaderPage } from "./styled";
 import { SearchForm } from "components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
@@ -15,7 +15,7 @@ export const Header = () => {
       </Link>
 
       <SearchForm placeholder="Search" />
-      <HeaderIcons>
+      <HeaderLinks>
         <Link to={ROUTE.FAVORITES}>
           <HeartIcon />
         </Link>
@@ -25,7 +25,7 @@ export const Header = () => {
         <Link to={ROUTE.ACCOUNT}>
           <UserIcon />
         </Link>
-      </HeaderIcons>
+      </HeaderLinks>
     </HeaderPage>
   );
 };
