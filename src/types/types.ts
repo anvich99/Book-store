@@ -35,6 +35,7 @@ interface Book {
   pages: string;
   year: string;
   rating: string;
+  language: string;
   desc: string;
   price: string;
   image: string;

@@ -1,6 +1,6 @@
 import { Button } from "components/Button/Button";
 import styled from "styled-components";
-import { BodySecondary, Colors, HeadlineTwo } from "ui";
+import { BodyPrimary, BodySecondary, Colors, HeadlineTwo } from "ui";
 
 const BookCardWrapper = styled.div`
   display: flex;
@@ -31,13 +31,25 @@ const Heart = styled.button`
   cursor: pointer;
 `;
 const CardInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 448px;
   width: 100%;
+  padding-top: 40px;
   border-top: 1px solid ${Colors.LightGrey};
+`;
+const CardContent = styled.div`
+  display: grid;
+  grid-template-columns: 100px 300px;
+  grid-template-rows: auto auto;
+  row-gap: 24px;
+  justify-content: space-between;
 `;
 const CardButton = styled(Button)`
   max-width: 448px;
-  padding: 18px 172px 14px;
+  width: 100%;
+  padding: 18px 0 14px;
 `;
 const Price = styled.p`
   ${HeadlineTwo}
@@ -47,13 +59,29 @@ const MoreInfoBtn = styled.button`
   background-color: transparent;
   ${BodySecondary}
 `;
+const Text = styled.p`
+  ${BodyPrimary};
+  color: ${Colors.Secondary};
+`;
+const Content = styled.p`
+  text-align: end;
+  ${BodyPrimary};
+`;
+const PreviewBook = styled.a`
+  ${BodySecondary};
+  text-decoration: none;
+`;
 export {
   BookCardWrapper,
   CardImageBackground,
   CardImage,
   CardInfo,
+  CardContent,
   CardButton,
   Heart,
   Price,
   MoreInfoBtn,
+  Text,
+  Content,
+  PreviewBook,
 };

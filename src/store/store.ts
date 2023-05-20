@@ -3,6 +3,7 @@ import newBooksReducer from "./features/new/newBooksSlice";
 import searchBooksReducer from "./features/search/searchBooks";
 import cartReducer from "./features/cart/cartSlice";
 import detailsReducer from "./features/bookDetails/bookDetails";
+
 export const store = configureStore({
   reducer: {
     cart: cartReducer,

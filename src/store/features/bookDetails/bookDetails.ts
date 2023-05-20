@@ -35,6 +35,7 @@ const initialState: BookDetailsState = {
   price: "",
   image: "",
   url: "",
+  language: "",
   pdf: null,
 };
 const BookDetailsSlice = createSlice({
@@ -60,6 +61,7 @@ const BookDetailsSlice = createSlice({
       state.price = payload.price;
       state.image = payload.image;
       state.url = payload.url;
+      state.language = payload.language;
     });
     builder.addCase(fetchBookDeatails.rejected, (state, { payload }) => {
       if (payload) {
