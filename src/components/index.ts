@@ -13,7 +13,8 @@ import { Spinner } from "./Spinner/Spinner";
 import { FormEmail } from "./FormEmail/FormEmail";
 import { SearchForm } from "./Search/SearchForm";
 import { StarRating } from "./StarRating/StarRating";
-
+import { ArrowBack } from "./ArrowBack/ArrowBack";
+import { BookCard } from "./BookCard/BookCard";
 export {
   BookItem,
   BooksList,
@@ -30,4 +31,6 @@ export {
   FormEmail,
   SearchForm,
   StarRating,
+  ArrowBack,
+  BookCard,
 };

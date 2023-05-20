@@ -1,15 +1,15 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel, ReactTabsFunctionComponent, TabProps } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
-import { Taba } from "./styled";
+// import "react-tabs/style/react-tabs.css";
+import { StyledTab } from "./styled";
 export const CustomTab: ReactTabsFunctionComponent<TabProps> = ({ children, ...otherProps }) => (
-  <Taba {...otherProps}>
+  <StyledTab {...otherProps}>
     <h1>{children}</h1>
-  </Taba>
+  </StyledTab>
 );
 
 CustomTab.tabsRole = "Tab";
-export const Taby = () => {
+export const MyTab = () => {
   return (
     <Tabs>
       <TabList>

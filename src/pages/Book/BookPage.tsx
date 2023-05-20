@@ -1,7 +1,5 @@
-import { FormEmail, Title } from "components";
-import { ArrowBack } from "components/ArrowBack/ArrowBack";
-import { BookCard } from "components/BookCard/BookCard";
-import { Taby } from "components/Taby/Taby";
+import { ArrowBack, BookCard, FormEmail, Title } from "components";
+import { MyTab } from "components/MyTab/MyTab";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "store";
@@ -25,6 +23,7 @@ export const BookPage = () => {
     url,
     language,
   } = useAppSelector(selectBookDetails);
+
   const { isbn13 } = useParams();
   const dispatch = useAppDispatch();
 
@@ -46,7 +45,7 @@ export const BookPage = () => {
         language={language}
         url={url}
       />
-      <Taby />
+      <MyTab />
       <FormEmail />
     </Template>
   );
