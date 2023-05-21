@@ -37,4 +37,5 @@ const BookAuthor = styled.p`
 const BookPrice = styled.p`
   ${HeadlineThree}
 `;
+
 export { BookCard, BookImage, BookTitle, BookAuthor, BookPrice, ImageBackground, BookInfo };

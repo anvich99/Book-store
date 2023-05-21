@@ -1,22 +1,26 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { Book } from "types";
+
 interface CartState {
-  products: any[];
+  cartItems: Book[];
   totalCost: number;
+  amount: number;
+  isLoading: boolean;
 }
+
 const initialState: CartState = {
-  products: [],
+  cartItems: [],
   totalCost: 0,
+  amount: 4,
+  isLoading: true,
 };
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, { payload }: PayloadAction<{ id: number; name: string }>) => {
-      state.products.push(payload);
-    },
-    clearCart: (state) => {
-      state.products = [];
-    },
+    addToCart: (state, { payload }: PayloadAction<{ id: number; name: string }>) => {},
+    clearCart: (state) => {},
   },
 });
 

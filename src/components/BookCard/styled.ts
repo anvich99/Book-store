@@ -91,6 +91,7 @@ const PreviewBook = styled.a`
   ${BodySecondary};
   text-decoration: none;
 `;
+
 export {
   BookCardWrapper,
   CardImageBackground,

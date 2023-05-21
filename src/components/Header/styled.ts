@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors } from "ui";
 
-const HeaderPage = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,5 +38,5 @@ const HeaderLinks = styled.div`
     }
   }
 `;
-
-export { HeaderPage, HeaderLogo, HeaderLinks };
+const Total = styled.p``;
+export { StyledHeader, HeaderLogo, HeaderLinks, Total };

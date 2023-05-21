@@ -28,9 +28,7 @@ const Tab = styled(UnstyledTab).attrs({
   text-align: center;
   padding: 12px 0;
   list-style: none;
-
   border-bottom: 1px solid #e0e0e0;
-
   ${BodySecondaryNormal};
   color: ${Colors.Secondary};
   cursor: pointer;
@@ -41,7 +39,6 @@ const Tab = styled(UnstyledTab).attrs({
 
   &.selected {
     ${BodySecondary}
-    /* border-bottom: none; */
     border-bottom: 2px solid ${Colors.Primary};
   }
 

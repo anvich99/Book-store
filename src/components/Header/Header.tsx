@@ -1,13 +1,16 @@
 import React from "react";
-import { HeaderLinks, HeaderLogo, HeaderPage } from "./styled";
+import { HeaderLinks, HeaderLogo, StyledHeader, Total } from "./styled";
 import { SearchForm } from "components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
 import { LogoIcon, HeartIcon, CartIcon, UserIcon } from "assets";
+import { selectCart, useAppDispatch, useAppSelector } from "store";
 
 export const Header = () => {
+  const { amount } = useAppSelector(selectCart);
+  const dispatch = useAppDispatch();
   return (
-    <HeaderPage>
+    <StyledHeader>
       <Link to={ROUTE.MAIN}>
         <HeaderLogo>
           <LogoIcon />
@@ -21,11 +24,12 @@ export const Header = () => {
         </Link>
         <Link to={ROUTE.CART}>
           <CartIcon />
+          <Total>{amount}</Total>
         </Link>
         <Link to={ROUTE.ACCOUNT}>
           <UserIcon />
         </Link>
       </HeaderLinks>
-    </HeaderPage>
+    </StyledHeader>
   );
 };

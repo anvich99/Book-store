@@ -33,34 +33,32 @@ export const BookCard = ({
   url,
 }: BookCardProps) => {
   return (
-    <>
-      <BookCardWrapper>
-        <CardImageBackground>
-          <CardImage src={image} />
-          <Heart>
-            <HeartIcon />
-          </Heart>
-        </CardImageBackground>
-        <CardInfo>
-          <CardContent>
-            <Price>{price}</Price>
-            <StarRating stars={+rating} />
-            <Text>Author</Text>
-            <Content>{authors}</Content>
-            <Text>Publisher</Text>
-            <Content>
-              {publisher}, {year}
-            </Content>
-            <Text>Language</Text>
-            <Content>{language}</Content>
-            <Text>Format</Text>
-            <Content>Paper book / ebook (PDF)</Content>
-          </CardContent>
-          <MoreInfoBtn>More details</MoreInfoBtn>
-          <CardButton type="submit">Add to cart</CardButton>
-          <PreviewBook href={url}>Preview book</PreviewBook>
-        </CardInfo>
-      </BookCardWrapper>
-    </>
+    <BookCardWrapper>
+      <CardImageBackground>
+        <CardImage src={image} />
+        <Heart>
+          <HeartIcon />
+        </Heart>
+      </CardImageBackground>
+      <CardInfo>
+        <CardContent>
+          <Price>{price}</Price>
+          <StarRating stars={+rating} />
+          <Text>Author</Text>
+          <Content>{authors}</Content>
+          <Text>Publisher</Text>
+          <Content>
+            {publisher}, {year}
+          </Content>
+          <Text>Language</Text>
+          <Content>{language}</Content>
+          <Text>Format</Text>
+          <Content>Paper book / ebook (PDF)</Content>
+        </CardContent>
+        <MoreInfoBtn>More details</MoreInfoBtn>
+        <CardButton type="submit">Add to cart</CardButton>
+        <PreviewBook href={url}>Preview book</PreviewBook>
+      </CardInfo>
+    </BookCardWrapper>
   );
 };
