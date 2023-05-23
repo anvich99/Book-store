@@ -10,7 +10,12 @@ const ItemImage = styled.img``;
 const ItemContent = styled.div``;
 const ItemTitle = styled.p``;
 const ItemInfo = styled.p``;
+const ItemAmount = styled.p``;
 const ItemPrice = styled.p``;
+const ItemCross = styled.button``;
+const ItemPlus = styled.button``;
+const ItemMinus = styled.button``;
+const AmountValue = styled.p``;
 export {
   StyledCartItem,
   ItemBackgroundImage,
@@ -19,4 +24,9 @@ export {
   ItemContent,
   ItemTitle,
   ItemPrice,
+  ItemCross,
+  ItemAmount,
+  ItemPlus,
+  ItemMinus,
+  AmountValue,
 };

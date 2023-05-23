@@ -7,7 +7,7 @@ import { fetchNewBooks } from "./features/new/newBooksSlice";
 import { selectCart } from "./selectors/cartSelectors";
 import { selectNewBooks } from "./selectors/newBooks";
 import { useAppSelector, useAppDispatch } from "./hooks/hooks";
-import { addToCart, clearCart } from "./features/cart/cartSlice";
+import { addToCart, clearCart, removeItem } from "./features/cart/cartSlice";
 import { fetchBooksBySearch } from "./features/search/searchBooks";
 import { RootState } from "./store";
 
@@ -22,6 +22,7 @@ export {
   useAppSelector,
   addToCart,
   clearCart,
+  removeItem,
   newBooksReducer,
   fetchBooksBySearch,
   searchBooksReducer,

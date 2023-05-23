@@ -7,6 +7,9 @@ import { ReactComponent as TwitterIcon } from "./icons/twitter.svg";
 import { ReactComponent as FacebookIcon } from "./icons/facebook.svg";
 import { ReactComponent as DottedIcon } from "./icons/dotted.svg";
 import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
+import { ReactComponent as CrossIcon } from "./icons/cross.svg";
+import { ReactComponent as MinusIcon } from "./icons/minus.svg";
+import { ReactComponent as PlusIcon } from "./icons/plus.svg";
 
 export {
   LogoIcon,
@@ -18,4 +21,7 @@ export {
   FacebookIcon,
   DottedIcon,
   ArrowIcon,
+  CrossIcon,
+  MinusIcon,
+  PlusIcon,
 };

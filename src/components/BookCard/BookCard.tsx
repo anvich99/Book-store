@@ -16,6 +16,7 @@ import {
 import { HeartIcon } from "assets";
 import { StarRating } from "components/StarRating/StarRating";
 import { Book } from "types";
+import { addToCart, useAppDispatch } from "store";
 
 type BookCardProps = Pick<
   Book,
@@ -32,6 +33,12 @@ export const BookCard = ({
   language,
   url,
 }: BookCardProps) => {
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart);
+  };
+
   return (
     <BookCardWrapper>
       <CardImageBackground>
@@ -56,7 +63,7 @@ export const BookCard = ({
           <Content>Paper book / ebook (PDF)</Content>
         </CardContent>
         <MoreInfoBtn>More details</MoreInfoBtn>
-        <CardButton type="submit">Add to cart</CardButton>
+        <CardButton onClick={handleAddToCart}>Add to cart</CardButton>
         <PreviewBook href={url}>Preview book</PreviewBook>
       </CardInfo>
     </BookCardWrapper>

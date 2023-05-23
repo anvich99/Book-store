@@ -1,9 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
 import { SearchBooksAPI } from "types";
+
 interface SearchBooksState extends SearchBooksAPI {
   isLoading: boolean;
 }
+
 export const fetchBooksBySearch = createAsyncThunk<SearchBooksAPI, string, { rejectValue: string }>(
   "searchBooks/fetchSearchBooks",
   async (searchBook, { rejectWithValue }) => {
@@ -24,6 +26,7 @@ const initialState: SearchBooksState = {
   error: null,
   page: "1.0",
 };
+
 const searchBookSlice = createSlice({
   name: "searchBooks",
   initialState,
@@ -45,4 +48,5 @@ const searchBookSlice = createSlice({
     });
   },
 });
+
 export default searchBookSlice.reducer;

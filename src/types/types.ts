@@ -42,4 +42,5 @@ interface Book {
   url: string;
   pdf?: {} | null;
 }
+
 export type { BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI };

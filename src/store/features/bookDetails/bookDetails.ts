@@ -38,6 +38,7 @@ const initialState: BookDetailsState = {
   language: "",
   pdf: null,
 };
+
 const BookDetailsSlice = createSlice({
   name: "bookDetails",
   initialState,

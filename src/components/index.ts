@@ -15,6 +15,10 @@ import { SearchForm } from "./Search/SearchForm";
 import { StarRating } from "./StarRating/StarRating";
 import { ArrowBack } from "./ArrowBack/ArrowBack";
 import { BookCard } from "./BookCard/BookCard";
+import { MyTab } from "./MyTab/MyTab";
+import { TotalCost } from "./TotalCost/TotalCost";
+import { EmptyMessage } from "./EmptyMessage/EmptyMessage";
+
 export {
   BookItem,
   BooksList,
@@ -33,4 +37,7 @@ export {
   StarRating,
   ArrowBack,
   BookCard,
+  MyTab,
+  TotalCost,
+  EmptyMessage,
 };

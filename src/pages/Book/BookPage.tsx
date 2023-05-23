@@ -2,7 +2,7 @@ import { ArrowBack, BookCard, FormEmail, Title } from "components";
 import { MyTab } from "components/MyTab/MyTab";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "store";
+import { addToCart, useAppDispatch, useAppSelector } from "store";
 import { fetchBookDeatails } from "store/features/bookDetails/bookDetails";
 import { selectBookDetails } from "store/selectors/detailsSelector";
 import { Template } from "templates";
@@ -27,6 +27,9 @@ export const BookPage = () => {
   const { isbn13 } = useParams();
   const dispatch = useAppDispatch();
 
+  const handleAddToCart = () => {
+    dispatch(addToCart);
+  };
   useEffect(() => {
     isbn13 ? dispatch(fetchBookDeatails(isbn13)) : console.log("Oleg, I need your help or advice");
   }, [isbn13]);
@@ -45,7 +48,7 @@ export const BookPage = () => {
         language={language}
         url={url}
       />
-      <MyTab />
+      <MyTab description={desc} authors={authors} />
       <FormEmail />
     </Template>
   );

@@ -1,6 +1,11 @@
 import { Tab, TabList, Tabs, TabPanel } from "./styled";
 
-export const MyTab = () => {
+interface MyTabProps {
+  description: string;
+  authors: string;
+}
+
+export const MyTab = ({ description, authors }: MyTabProps) => {
   return (
     <Tabs>
       <TabList>
@@ -8,8 +13,8 @@ export const MyTab = () => {
         <Tab>Authors</Tab>
         <Tab className="disabled">Reviews</Tab>
       </TabList>
-      <TabPanel>Panel 1</TabPanel>
-      <TabPanel>Panel 2</TabPanel>
+      <TabPanel>{description}</TabPanel>
+      <TabPanel>{authors}</TabPanel>
     </Tabs>
   );
 };
