@@ -18,6 +18,8 @@ import { BookCard } from "./BookCard/BookCard";
 import { MyTab } from "./MyTab/MyTab";
 import { TotalCost } from "./TotalCost/TotalCost";
 import { EmptyMessage } from "./EmptyMessage/EmptyMessage";
+import { Menu } from "./Menu/Menu";
+import { BurgerMenu } from "./BurgerMenu/BurgerMenu";
 
 export {
   BookItem,
@@ -40,4 +42,6 @@ export {
   MyTab,
   TotalCost,
   EmptyMessage,
+  Menu,
+  BurgerMenu,
 };

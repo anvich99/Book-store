@@ -1,14 +1,15 @@
 import React from "react";
-import { HeaderLinks, HeaderLogo, StyledHeader, Total } from "./styled";
-import { SearchForm } from "components";
+import { HeaderLogo, StyledHeader } from "./styled";
+import { BurgerMenu, Menu } from "components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
-import { LogoIcon, HeartIcon, CartIcon, UserIcon } from "assets";
-import { selectCart, useAppDispatch, useAppSelector } from "store";
+import { LogoIcon } from "assets";
+import { useToggle, useWindowSize } from "hooks";
 
 export const Header = () => {
-  const { amount } = useAppSelector(selectCart);
-  const dispatch = useAppDispatch();
+  const [isMenuOpen, toggleMenu] = useToggle();
+  const { width = 0 } = useWindowSize();
+  const isMobile = width < 768;
   return (
     <StyledHeader>
       <Link to={ROUTE.MAIN}>
@@ -16,20 +17,8 @@ export const Header = () => {
           <LogoIcon />
         </HeaderLogo>
       </Link>
-
-      <SearchForm placeholder="Search" />
-      <HeaderLinks>
-        <Link to={ROUTE.FAVORITES}>
-          <HeartIcon />
-        </Link>
-        <Link to={ROUTE.CART}>
-          <CartIcon />
-          <Total>{amount}</Total>
-        </Link>
-        <Link to={ROUTE.ACCOUNT}>
-          <UserIcon />
-        </Link>
-      </HeaderLinks>
+      <Menu isOpen={isMenuOpen} isMobile={isMobile} handleClose={toggleMenu} />
+      {isMobile && <BurgerMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />}
     </StyledHeader>
   );
 };

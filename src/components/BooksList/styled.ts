@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "ui";
+import { Colors, MediaBreakpoints } from "ui";
 
 const BooksContainer = styled.div`
   display: flex;
@@ -19,6 +19,8 @@ const BooksContainer = styled.div`
   }
   & > :nth-child(3n + 1) > :nth-child(1) {
     background-color: ${Colors.Purple};
+  }
+  ${MediaBreakpoints.md} {
   }
 `;
 

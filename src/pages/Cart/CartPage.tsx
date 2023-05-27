@@ -1,6 +1,8 @@
-import { Button, CartList, Title, TotalCost, EmptyMessage } from "components";
+import { Button, CartList, Title, TotalCost, EmptyMessage, ArrowBack } from "components";
+import { ROUTE } from "routes";
 import { clearCart, selectCart, useAppDispatch, useAppSelector } from "store";
 import { Template } from "templates";
+import { StyledButtonClear } from "./styled";
 
 export const CartPage = () => {
   const { amount, cartItems, totalCost } = useAppSelector(selectCart);
@@ -16,10 +18,11 @@ export const CartPage = () => {
         <EmptyMessage />
       ) : (
         <>
+          <ArrowBack link={ROUTE.MAIN} />
           <Title>Your cart</Title>
           <CartList bookItems={cartItems} />
           <TotalCost total={totalCost} />
-          <Button onClick={handleClearCart}>Clear</Button>
+          <StyledButtonClear onClick={handleClearCart}>Clear</StyledButtonClear>
         </>
       )}
     </Template>

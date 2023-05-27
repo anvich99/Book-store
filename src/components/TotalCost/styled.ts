@@ -1,5 +1,15 @@
 import styled from "styled-components";
+import { HeadlineTwo, SublineText } from "ui";
 
-const Total = styled.p``;
+const StyledTotalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const StyledTotal = styled.p`
+  ${HeadlineTwo}
+`;
+const StyledSum = styled.p`
+  ${SublineText}
+`;
 
-export { Total };
+export { StyledTotal, StyledSum, StyledTotalContainer };

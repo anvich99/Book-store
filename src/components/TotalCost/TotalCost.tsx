@@ -1,9 +1,16 @@
 import React from "react";
-import { Total } from "./styled";
+import { StyledSum, StyledTotal, StyledTotalContainer } from "./styled";
 
 interface TotalCostProps {
   total: number;
 }
+
 export const TotalCost = ({ total }: TotalCostProps) => {
-  return <Total>Total: {total}</Total>;
+  return (
+    <StyledTotalContainer>
+      <StyledSum>Sum: {total}</StyledSum>
+      <StyledSum>VAT: {total}</StyledSum>
+      <StyledTotal>Total: {total}</StyledTotal>
+    </StyledTotalContainer>
+  );
 };

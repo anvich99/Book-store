@@ -2,6 +2,7 @@ import { ArrowBack, BookCard, FormEmail, Title } from "components";
 import { MyTab } from "components/MyTab/MyTab";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { ROUTE } from "routes";
 import { addToCart, useAppDispatch, useAppSelector } from "store";
 import { fetchBookDeatails } from "store/features/bookDetails/bookDetails";
 import { selectBookDetails } from "store/selectors/detailsSelector";
@@ -36,7 +37,7 @@ export const BookPage = () => {
 
   return (
     <Template>
-      <ArrowBack />
+      <ArrowBack link={ROUTE.MAIN} />
       <Title>{title} </Title>
       <BookCard
         image={image}

@@ -1,9 +1,12 @@
 import { ArrowIcon } from "assets";
 import { Arrow } from "./styled";
 
-export const ArrowBack = () => {
+interface ArrowBackProps {
+  link: string;
+}
+export const ArrowBack = ({ link }: ArrowBackProps) => {
   return (
-    <Arrow>
+    <Arrow to={link}>
       <ArrowIcon />
     </Arrow>
   );

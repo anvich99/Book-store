@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Colors, HeadlineThree, SublineText } from "ui";
+import { Colors, HeadlineThree, MediaBreakpoints, SublineText } from "ui";
 
 const BookCard = styled(Link)`
   display: flex;
@@ -14,15 +14,24 @@ const BookCard = styled(Link)`
     /* transition: 0.3s linear;
     border: 1px solid ${Colors.PrimaryLight}; */
   }
+  ${MediaBreakpoints.md} {
+    max-width: 328px;
+  }
 `;
 const ImageBackground = styled.div`
   display: flex;
   justify-content: center;
   max-width: 352px;
   width: 100%;
+  ${MediaBreakpoints.md} {
+    max-width: 328px;
+  }
 `;
 const BookImage = styled.img`
   max-width: 226px;
+  ${MediaBreakpoints.md} {
+    max-width: 210px;
+  }
 `;
 const BookInfo = styled.div`
   display: flex;

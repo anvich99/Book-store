@@ -24,7 +24,7 @@ const initialState: CartState = {
       language: "eng",
       desc: "fgfg",
       price: "30$",
-      image: "https://i.pinimg.com/originals/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
+      image: "https://itbook.store/img/books/9781617294136.png",
       url: "https://i.pinimg.com/originals/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
     },
   ],

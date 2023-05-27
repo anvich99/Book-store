@@ -13,8 +13,9 @@ import {
   ItemMinus,
   ItemPlus,
   AmountValue,
+  ItemText,
 } from "./styled";
-import { CrossIcon } from "assets";
+import { CrossIcon, MinusIcon, PlusIcon } from "assets";
 import { useAppDispatch } from "store";
 
 interface CartItemProps {
@@ -30,20 +31,27 @@ export const CartItem = ({ cartItem }: CartItemProps) => {
         <ItemImage src={cartItem.image} alt={cartItem.title} />
       </ItemBackgroundImage>
       <ItemContent>
-        <ItemTitle>{cartItem.title}</ItemTitle>
-        <ItemInfo>
-          {cartItem.authors}, {cartItem.publisher}, {cartItem.year}
-        </ItemInfo>
-        <ItemAmount>
-          <ItemMinus />
-          {/* <AmountValue>{amount}</AmountValue> */}
-          <ItemPlus />
-        </ItemAmount>
+        <ItemText>
+          <ItemTitle>{cartItem.title}</ItemTitle>
+          <ItemInfo>
+            {cartItem.authors}, {cartItem.publisher}, {cartItem.year}
+          </ItemInfo>
+          <ItemAmount>
+            <ItemMinus>
+              <MinusIcon />
+            </ItemMinus>
+            <AmountValue>1</AmountValue>
+            <ItemPlus>
+              <PlusIcon />
+            </ItemPlus>
+          </ItemAmount>
+        </ItemText>
+
+        <ItemPrice>{cartItem.price}</ItemPrice>
+        <ItemCross>
+          <CrossIcon />
+        </ItemCross>
       </ItemContent>
-      <ItemPrice>{cartItem.price}</ItemPrice>
-      <ItemCross>
-        <CrossIcon />
-      </ItemCross>
     </StyledCartItem>
   );
 };

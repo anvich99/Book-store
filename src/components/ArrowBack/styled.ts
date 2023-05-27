@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Arrow = styled.button`
+const Arrow = styled(Link)`
   margin-bottom: 32px;
   background-color: transparent;
   border: none;
