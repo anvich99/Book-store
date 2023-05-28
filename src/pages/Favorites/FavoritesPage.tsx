@@ -1,4 +1,4 @@
-import { FavoriteList, Title } from "components";
+import { ArrowBack, FavoriteList, Title } from "components";
 import React from "react";
 import { addToFavorite, selectFavoriteBooks, useAppDispatch, useAppSelector } from "store";
 import { Template } from "templates";
@@ -11,6 +11,7 @@ export const FavoritesPage = () => {
   return (
     <Container>
       <Template>
+        <ArrowBack />
         <Title>Favorites</Title>
         <FavoriteList books={favoriteBooks} />
       </Template>

@@ -31,7 +31,7 @@ export const CartPage = () => {
         <EmptyMessage />
       ) : (
         <>
-          <ArrowBack link={ROUTE.MAIN} />
+          <ArrowBack />
           <Title>Your cart</Title>
           <CartList bookItems={cartItems} />
           <TotalCost total={total} />

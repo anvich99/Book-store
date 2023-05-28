@@ -20,7 +20,11 @@ const BooksContainer = styled.div`
   & > :nth-child(3n + 1) > :nth-child(1) {
     background-color: ${Colors.Purple};
   }
+  ${MediaBreakpoints.lg} {
+    justify-content: space-between;
+  }
   ${MediaBreakpoints.md} {
+    gap: 48px 15px;
   }
 `;
 

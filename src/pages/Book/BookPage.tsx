@@ -28,7 +28,7 @@ export const BookPage = () => {
 
   return (
     <Template>
-      <ArrowBack link={ROUTE.MAIN} />
+      <ArrowBack />
       <Title>{book.title} </Title>
       <BookCard books={book} addBookToCart={handleAddToCart} addToFavorite={handleAddToFavorite} />
       <MyTab description={book.desc} authors={book.authors} />

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MediaBreakpoints } from "./media";
 
 const Container = styled.div`
   margin: 0 auto;

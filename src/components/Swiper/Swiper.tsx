@@ -49,12 +49,7 @@ export const Swiper = ({ books }: SwiperProps) => {
         {books.map((book) => {
           return (
             <SwiperSlideItem key={book.isbn13}>
-              <StyledLinkSwiper
-                to={generatePath(ROUTE.MAIN + ROUTE.BOOK, { isbn13: book.isbn13 })}
-                key={book.isbn13}
-              >
-                <BookItem book={book} />
-              </StyledLinkSwiper>
+              <BookItem book={book} key={book.isbn13} />
             </SwiperSlideItem>
           );
         })}
