@@ -1,17 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { Book } from "types";
 
-interface BooksState {
-  books: any[];
+interface FavoriteState {
+  favoriteBooks: Book[];
+  isLoading: boolean;
 }
 
-const initialState: BooksState = {
-  books: [],
+const initialState: FavoriteState = {
+  favoriteBooks: [],
+  isLoading: true,
 };
 
 const favoritesSlice = createSlice({
-  name: "books",
+  name: "favoriteBooks",
   initialState,
-  reducers: {},
+  reducers: {
+    addToFavorite: (state, { payload }: PayloadAction<Book>) => {
+      state.favoriteBooks.push(payload);
+    },
+  },
 });
 
 export default favoritesSlice.reducer;
+export const { addToFavorite } = favoritesSlice.actions;

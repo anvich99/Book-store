@@ -18,30 +18,20 @@ import { StarRating } from "components";
 import { Book } from "types";
 import { addToCart, selectCart, useAppDispatch, useAppSelector } from "store";
 
-// type BookCardProps = Pick<
-//   Book,
-//   "authors" | "image" | "price" | "rating" | "publisher" | "year" | "language" | "url"
-// >;
 interface BookCardProps {
   books: Pick<
     Book,
     "authors" | "image" | "price" | "rating" | "publisher" | "year" | "language" | "url"
   >;
-  addBook: () => void;
+  addBookToCart: () => void;
+  addToFavorite: () => void;
 }
-export const BookCard = ({ books, addBook }: BookCardProps) => {
-  // const book = useAppSelector(selectCart);
-  // const dispatch = useAppDispatch();
-
-  // const handleAddToCart = () => {
-  //   dispatch(addToCart());
-  // };
-
+export const BookCard = ({ books, addBookToCart, addToFavorite }: BookCardProps) => {
   return (
     <BookCardWrapper>
       <CardImageBackground>
         <CardImage src={books.image} />
-        <Heart>
+        <Heart onClick={addToFavorite}>
           <HeartIcon />
         </Heart>
       </CardImageBackground>
@@ -61,7 +51,7 @@ export const BookCard = ({ books, addBook }: BookCardProps) => {
           <Content>Paper book / ebook (PDF)</Content>
         </CardContent>
         <MoreInfoBtn>More details</MoreInfoBtn>
-        <CardButton onClick={addBook}>Add to cart</CardButton>
+        <CardButton onClick={addBookToCart}>Add to cart</CardButton>
         <PreviewBook href={books.url}>Preview book</PreviewBook>
       </CardInfo>
     </BookCardWrapper>

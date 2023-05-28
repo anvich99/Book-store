@@ -20,7 +20,10 @@ import { TotalCost } from "./TotalCost/TotalCost";
 import { EmptyMessage } from "./EmptyMessage/EmptyMessage";
 import { Menu } from "./Menu/Menu";
 import { BurgerMenu } from "./BurgerMenu/BurgerMenu";
-
+import { FavoriteItem } from "./FaviriteItem/FavoriteItem";
+import { FavoriteList } from "./FavoriteList/FavoriteList";
+import { Swiper } from "./Swiper/Swiper";
+import { FormAuth } from "./FormAuth/FormAuth";
 export {
   BookItem,
   BooksList,
@@ -44,4 +47,8 @@ export {
   EmptyMessage,
   Menu,
   BurgerMenu,
+  FavoriteItem,
+  FavoriteList,
+  Swiper,
+  FormAuth,
 };

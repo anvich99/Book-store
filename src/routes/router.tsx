@@ -8,6 +8,7 @@ import {
   FavoritesPage,
   SearchPage,
   SignInPage,
+  SignUpPage,
 } from "pages";
 import { ROUTE } from "./routes";
 
@@ -21,6 +22,7 @@ export const router = createBrowserRouter(
       <Route path={ROUTE.CART} element={<CartPage />} />
       <Route path={ROUTE.ACCOUNT} element={<AccountPage />} />
       <Route path={ROUTE.SEARCH} element={<SearchPage />} />
+      <Route path={ROUTE.SIGN_UP} element={<SignUpPage />} />
     </>,
   ),
 );

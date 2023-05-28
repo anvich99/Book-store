@@ -1,5 +1,5 @@
 import { CartItem } from "components/CartItem/CartItem";
-import { StyledCartList } from "./styled";
+import { StyledList } from "./styled";
 import { Book } from "types";
 
 interface CartListProps {
@@ -8,10 +8,10 @@ interface CartListProps {
 
 export const CartList = ({ bookItems }: CartListProps) => {
   return (
-    <StyledCartList>
+    <StyledList>
       {bookItems.map((item) => {
         return <CartItem key={item.isbn13} cartItem={item} />;
       })}
-    </StyledCartList>
+    </StyledList>
   );
 };

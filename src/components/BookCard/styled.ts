@@ -72,7 +72,9 @@ const CardButton = styled(Button)`
   padding: 18px 0 14px;
 `;
 const Price = styled.p`
-  ${HeadlineTwo}
+  ${HeadlineTwo};
+  align-self: center;
+  justify-content: end;
 `;
 const MoreInfoBtn = styled.button`
   border: none;

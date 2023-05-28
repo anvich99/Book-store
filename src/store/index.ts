@@ -7,10 +7,12 @@ import { fetchNewBooks } from "./features/new/newBooksSlice";
 import { selectCart } from "./selectors/cartSelectors";
 import { selectNewBooks } from "./selectors/newBooks";
 import { useAppSelector, useAppDispatch } from "./hooks/hooks";
-import { addToCart, clearCart, removeItem } from "./features/cart/cartSlice";
+import { addToCart, clearCart, removeItem, calculateTotals } from "./features/cart/cartSlice";
 import { fetchBooksBySearch } from "./features/search/searchBooks";
 import { RootState } from "./store";
-
+import { selectFavoriteBooks } from "./selectors/favoritesSelectors";
+import { addToFavorite } from "./features/favorites/favoritesSlice";
+import { selectSearchBooks } from "./selectors/searchBooksSelect";
 export {
   store,
   cartReducer,
@@ -26,6 +28,10 @@ export {
   newBooksReducer,
   fetchBooksBySearch,
   searchBooksReducer,
+  calculateTotals,
+  selectFavoriteBooks,
+  addToFavorite,
+  selectSearchBooks,
 };
 
 export type { RootState };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors } from "ui";
 
-const StyledCartList = styled.ul`
+const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -20,4 +20,4 @@ const StyledCartList = styled.ul`
   }
 `;
 
-export { StyledCartList };
+export { StyledList };

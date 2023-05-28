@@ -29,7 +29,7 @@ export const Menu = ({ isOpen, isMobile, handleClose }: MenuProps) => {
         <Link to={ROUTE.MAIN + ROUTE.CART} onClick={handleClose}>
           <CartIcon />
         </Link>
-        <Link to={ROUTE.MAIN + ROUTE.ACCOUNT} onClick={handleClose}>
+        <Link to={ROUTE.MAIN + ROUTE.SIGN_UP} onClick={handleClose}>
           <UserIcon />
         </Link>
       </StyledNav>

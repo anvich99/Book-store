@@ -1,7 +1,7 @@
 import React from "react";
 import { Book } from "types";
 import {
-  StyledCartItem,
+  StyledItem,
   ItemBackgroundImage,
   ItemContent,
   ItemImage,
@@ -16,17 +16,22 @@ import {
   ItemText,
 } from "./styled";
 import { CrossIcon, MinusIcon, PlusIcon } from "assets";
-import { useAppDispatch } from "store";
+import { removeItem, selectCart, useAppDispatch, useAppSelector } from "store";
+import { useParams } from "react-router-dom";
 
 interface CartItemProps {
   cartItem: Book;
 }
 
 export const CartItem = ({ cartItem }: CartItemProps) => {
+  const books = useAppSelector(selectCart);
   const dispatch = useAppDispatch();
-
+  const { isbn13 } = useParams();
+  const handleDeleteBook = () => {
+    dispatch(removeItem(isbn13));
+  };
   return (
-    <StyledCartItem>
+    <StyledItem key={cartItem.isbn13}>
       <ItemBackgroundImage>
         <ItemImage src={cartItem.image} alt={cartItem.title} />
       </ItemBackgroundImage>
@@ -48,10 +53,10 @@ export const CartItem = ({ cartItem }: CartItemProps) => {
         </ItemText>
 
         <ItemPrice>{cartItem.price}</ItemPrice>
-        <ItemCross>
+        <ItemCross onClick={handleDeleteBook}>
           <CrossIcon />
         </ItemCross>
       </ItemContent>
-    </StyledCartItem>
+    </StyledItem>
   );
 };

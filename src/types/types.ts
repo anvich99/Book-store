@@ -42,5 +42,19 @@ interface Book {
   url: string;
   pdf?: {} | null;
 }
-
-export type { BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI };
+interface BookCart {
+  error: string | null;
+  title: string;
+  subtitle: string;
+  authors: string;
+  publisher: string;
+  isbn13: string;
+  pages: string;
+  year: string;
+  rating: string;
+  language: string;
+  price: string;
+  image: string;
+  amount: number;
+}
+export type { BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI, BookCart };

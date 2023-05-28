@@ -5,5 +5,15 @@ import { CartPage } from "./Cart/CartPage";
 import { FavoritesPage } from "./Favorites/FavoritesPage";
 import { SearchPage } from "./Search/SearchPage";
 import { SignInPage } from "./SignIn/SignInPage";
+import { SignUpPage } from "./SignUp/SignUpPage";
 
-export { MainPage, AccountPage, BookPage, CartPage, FavoritesPage, SearchPage, SignInPage };
+export {
+  MainPage,
+  SignUpPage,
+  AccountPage,
+  BookPage,
+  CartPage,
+  FavoritesPage,
+  SearchPage,
+  SignInPage,
+};

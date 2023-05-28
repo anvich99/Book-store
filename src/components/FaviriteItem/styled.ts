@@ -30,7 +30,6 @@ const ItemText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 300px;
 `;
 const ItemTitle = styled.p`
   ${HeadlineThree}
