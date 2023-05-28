@@ -21,15 +21,15 @@ export const Menu = ({ isOpen, isMobile, handleClose }: MenuProps) => {
   const currentVariant = isMobile ? (isOpen ? "open" : "closed") : "idle";
   return (
     <>
-      <SearchForm placeholder="Search" />
+      <SearchForm placeholder="Search" link={ROUTE.MAIN + ROUTE.SEARCH} />
       <StyledNav animate={currentVariant} variants={menuVariants} initial="idle">
-        <Link to={ROUTE.FAVORITES} onClick={handleClose}>
+        <Link to={ROUTE.MAIN + ROUTE.FAVORITES} onClick={handleClose}>
           <HeartIcon />
         </Link>
-        <Link to={ROUTE.CART} onClick={handleClose}>
+        <Link to={ROUTE.MAIN + ROUTE.CART} onClick={handleClose}>
           <CartIcon />
         </Link>
-        <Link to={ROUTE.ACCOUNT} onClick={handleClose}>
+        <Link to={ROUTE.MAIN + ROUTE.ACCOUNT} onClick={handleClose}>
           <UserIcon />
         </Link>
       </StyledNav>

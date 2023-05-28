@@ -9,27 +9,9 @@ interface CartState {
 }
 
 const initialState: CartState = {
-  cartItems: [
-    {
-      error: "404",
-      title: "morozko",
-      subtitle: "3 kozla",
-      authors: "kto-to",
-      publisher: "esta",
-      isbn10: "123",
-      isbn13: "34332",
-      pages: "134",
-      year: "2022",
-      rating: "5",
-      language: "eng",
-      desc: "fgfg",
-      price: "30$",
-      image: "https://itbook.store/img/books/9781617294136.png",
-      url: "https://i.pinimg.com/originals/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
-    },
-  ],
+  cartItems: [],
   totalCost: 0,
-  amount: 3,
+  amount: 0,
   isLoading: true,
 };
 
@@ -37,25 +19,8 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, { payload }) => {
-      console.log(payload);
-      state.cartItems.push({
-        error: "404",
-        title: "morozko",
-        subtitle: "3 kozla",
-        authors: "kto-to",
-        publisher: "esta",
-        isbn10: "123",
-        isbn13: "34332",
-        pages: "134",
-        year: "2022",
-        rating: "5",
-        language: "eng",
-        desc: "fgfg",
-        price: "30$",
-        image: "https://i.pinimg.com/originals/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
-        url: "https://i.pinimg.com/originals/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
-      });
+    addToCart: (state, { payload }: PayloadAction<Book>) => {
+      state.cartItems.push(payload);
     },
     clearCart: (state) => {
       state.cartItems = [];
@@ -64,6 +29,7 @@ const cartSlice = createSlice({
       const bookIsbn = action.payload;
     },
   },
+  extraReducers(builder) {},
 });
 
 export default cartSlice.reducer;

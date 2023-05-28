@@ -7,8 +7,9 @@ import { selectSearchBooks } from "store/selectors/searchBooksSelect";
 
 interface SearchFormProps {
   placeholder: string;
+  link: string;
 }
-export const SearchForm = ({ placeholder }: SearchFormProps) => {
+export const SearchForm = ({ placeholder, link }: SearchFormProps) => {
   const { books, isLoading, error, page } = useAppSelector(selectSearchBooks);
   const { register, handleSubmit } = useForm();
   const dispatch = useAppDispatch();
@@ -20,7 +21,7 @@ export const SearchForm = ({ placeholder }: SearchFormProps) => {
   return (
     <Search onSubmit={handleSubmit(onSubmit)}>
       <InputSearch type="text" placeholder={placeholder} {...register("searchValue")} />
-      <SearchBtn type="submit">
+      <SearchBtn to={link}>
         <SearchIcon />
       </SearchBtn>
     </Search>

@@ -9,7 +9,7 @@ export const CartPage = () => {
   const dispatch = useAppDispatch();
 
   const handleClearCart = () => {
-    dispatch(clearCart);
+    dispatch(clearCart());
   };
 
   return (

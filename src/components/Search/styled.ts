@@ -1,4 +1,5 @@
 import { InputStyle } from "components/Input/styled";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Search = styled.form`
@@ -12,7 +13,7 @@ const InputSearch = styled(InputStyle)`
   width: 100%;
   padding: 14px 16px 10px 20px;
 `;
-const SearchBtn = styled.button`
+const SearchBtn = styled(Link)`
   position: absolute;
   top: 18px;
   right: 44px;

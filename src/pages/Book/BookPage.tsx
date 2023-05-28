@@ -9,47 +9,24 @@ import { selectBookDetails } from "store/selectors/detailsSelector";
 import { Template } from "templates";
 
 export const BookPage = () => {
-  const {
-    title,
-    subtitle,
-    authors,
-    publisher,
-    isbn10,
-    pages,
-    year,
-    rating,
-    desc,
-    price,
-    image,
-    url,
-    language,
-  } = useAppSelector(selectBookDetails);
+  const book = useAppSelector(selectBookDetails);
 
-  const { isbn13 } = useParams();
+  const { isbn13 = "" } = useParams();
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCart);
+    dispatch(addToCart(book));
   };
   useEffect(() => {
-    isbn13 ? dispatch(fetchBookDeatails(isbn13)) : console.log("Oleg, I need your help or advice");
-  }, [isbn13]);
+    dispatch(fetchBookDeatails(isbn13));
+  }, [dispatch, isbn13]);
 
   return (
     <Template>
       <ArrowBack link={ROUTE.MAIN} />
-      <Title>{title} </Title>
-      <BookCard
-        image={image}
-        price={price}
-        rating={rating}
-        authors={authors}
-        publisher={publisher}
-        year={year}
-        language={language}
-        url={url}
-      />
-      <MyTab description={desc} authors={authors} />
+      <Title>{book.title} </Title>
+      <BookCard books={book} addBook={handleAddToCart} />
+      <MyTab description={book.desc} authors={book.authors} />
       <FormEmail />
     </Template>
   );
