@@ -49,10 +49,20 @@ const BookInfo = styled.div`
   padding: 0 10px;
 `;
 const BookTitle = styled.p`
-  ${HeadlineThree}
+  ${HeadlineThree};
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 const BookAuthor = styled.p`
-  ${SublineText}
+  ${SublineText};
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 const BookPrice = styled.p`
   ${HeadlineThree}

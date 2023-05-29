@@ -57,4 +57,9 @@ interface BookCart {
   image: string;
   amount: number;
 }
-export type { BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI, BookCart };
+
+interface AuthValues {
+  email: string;
+  password: string;
+}
+export type { AuthValues, BookAPI, NewBook, NewBookAPI, Book, SearchBooksAPI, BookCart };

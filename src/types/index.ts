@@ -1,3 +1,3 @@
-import { Book, BookAPI, NewBook, NewBookAPI, SearchBooksAPI } from "./types";
+import { AuthValues, Book, BookAPI, NewBook, NewBookAPI, SearchBooksAPI } from "./types";
 
-export type { Book, BookAPI, NewBook, NewBookAPI, SearchBooksAPI };
+export type { AuthValues, Book, BookAPI, NewBook, NewBookAPI, SearchBooksAPI };

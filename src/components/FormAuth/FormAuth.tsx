@@ -4,19 +4,16 @@ import { Button, Input } from "components";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { AuthValues } from "types";
+import { useAppDispatch } from "store";
+import { fetchSignUpUser } from "store/features/userInfo/userInfoSlice";
 
-interface AuthValues {
-  email: string;
-  password: string;
-}
 export const FormAuth = () => {
   const { register, handleSubmit } = useForm<AuthValues>();
+  const dispatch = useAppDispatch();
 
-  const onSubmit: SubmitHandler<AuthValues> = ({ email, password }) => {
-    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      const user = userCredential.user;
-      console.log(userCredential);
-    });
+  const onSubmit: SubmitHandler<AuthValues> = (data) => {
+    dispatch(fetchSignUpUser(data));
   };
 
   return (
