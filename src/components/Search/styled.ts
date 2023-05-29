@@ -13,7 +13,7 @@ const InputSearch = styled(InputStyle)`
   width: 100%;
   padding: 14px 16px 10px 20px;
 `;
-const SearchBtn = styled(Link)`
+const SearchBtn = styled.button`
   position: absolute;
   top: 18px;
   right: 44px;

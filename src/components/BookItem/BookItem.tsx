@@ -19,7 +19,7 @@ interface BookItemProps {
 
 export const BookItem = ({ book }: BookItemProps) => {
   return (
-    <BookCard to={generatePath(ROUTE.MAIN + ROUTE.BOOK, { isbn13: book.isbn13 })} key={book.isbn13}>
+    <BookCard to={generatePath(`../${ROUTE.BOOK}`, { isbn13: book.isbn13 })} key={book.isbn13}>
       <ImageBackground>
         <BookImage src={book.image} alt={book.title} />
       </ImageBackground>

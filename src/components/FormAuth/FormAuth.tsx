@@ -14,15 +14,15 @@ export const FormAuth = () => {
 
   const onSubmit: SubmitHandler<AuthValues> = ({ email, password }) => {
     createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      // const user = userCredential.user;
+      const user = userCredential.user;
       console.log(userCredential);
     });
   };
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
-      <Input type="text" {...register("email")} placeholder="email" />
-      <Input type="password" {...register("password")} placeholder="password" />
+      <input type="text" {...register("email")} placeholder="email" />
+      <input type="password" {...register("password")} placeholder="password" />
       <Button type="submit">Submit</Button>
     </StyledForm>
   );

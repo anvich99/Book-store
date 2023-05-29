@@ -10,7 +10,7 @@ export const SearchPage = () => {
   return (
     <Template>
       <Title>search results</Title>
-      {/* <BooksList books={books} /> */}
+      {books?.length > 0 && <BooksList books={books} />}
     </Template>
   );
 };
