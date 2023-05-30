@@ -24,6 +24,9 @@ import { FavoriteItem } from "./FaviriteItem/FavoriteItem";
 import { FavoriteList } from "./FavoriteList/FavoriteList";
 import { Swiper } from "./Swiper/Swiper";
 import { FormAuth } from "./FormAuth/FormAuth";
+import { Modal } from "./Modal/Modal";
+import { Portal } from "./Portal/Portal";
+
 export {
   BookItem,
   BooksList,
@@ -51,4 +54,6 @@ export {
   FavoriteList,
   Swiper,
   FormAuth,
+  Modal,
+  Portal,
 };

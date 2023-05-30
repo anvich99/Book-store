@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderLogo, StyledHeader } from "./styled";
 import { BurgerMenu, Menu } from "components";
 import { Link } from "react-router-dom";

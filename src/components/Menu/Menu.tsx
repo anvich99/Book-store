@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledNav } from "./styled";
+import { Links, StyledNav } from "./styled";
 import { Link } from "react-router-dom";
 import { ROUTE } from "routes";
 import { CartIcon, HeartIcon, UserIcon } from "assets";
@@ -21,17 +21,19 @@ export const Menu = ({ isOpen, isMobile, handleClose }: MenuProps) => {
   const currentVariant = isMobile ? (isOpen ? "open" : "closed") : "idle";
   return (
     <>
-      <SearchForm placeholder="Search" />
       <StyledNav animate={currentVariant} variants={menuVariants} initial="idle">
-        <Link to={`../${ROUTE.FAVORITES}`} onClick={handleClose}>
-          <HeartIcon />
-        </Link>
-        <Link to={`../${ROUTE.CART}`} onClick={handleClose}>
-          <CartIcon />
-        </Link>
-        <Link to={`../${ROUTE.SIGN_UP}`} onClick={handleClose}>
-          <UserIcon />
-        </Link>
+        <SearchForm placeholder="Search" />
+        <Links>
+          <Link to={`../${ROUTE.FAVORITES}`} onClick={handleClose}>
+            <HeartIcon />
+          </Link>
+          <Link to={`../${ROUTE.CART}`} onClick={handleClose}>
+            <CartIcon />
+          </Link>
+          <Link to={`../${ROUTE.SIGN_UP}`} onClick={handleClose}>
+            <UserIcon />
+          </Link>
+        </Links>
       </StyledNav>
     </>
   );

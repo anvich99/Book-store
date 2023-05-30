@@ -16,6 +16,7 @@
     "@types/react-select": "^5.0.1",
     "@types/styled-components": "^5.1.26",
     "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
     "firebase": "^9.22.1",
     "framer-motion": "^10.12.16",
     "gh-pages": "^5.0.0",

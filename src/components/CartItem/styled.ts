@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, HeadlineThree, HeadlineTwo, SublineText } from "ui";
+import { Colors, HeadlineThree, HeadlineTwo, MediaBreakpoints, SublineText } from "ui";
 
 const StyledItem = styled.li`
   display: flex;
@@ -8,6 +8,10 @@ const StyledItem = styled.li`
   width: 100%;
   padding-bottom: 49px;
   border-bottom: 1px solid ${Colors.Secondary};
+  ${MediaBreakpoints.sm} {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 const ItemBackgroundImage = styled.div`
   display: flex;
@@ -15,9 +19,15 @@ const ItemBackgroundImage = styled.div`
   max-width: 256px;
   width: 100%;
   background-color: ${Colors.Blue};
+  ${MediaBreakpoints.sm} {
+    max-width: 100%;
+  }
 `;
 const ItemImage = styled.img`
   max-width: 164px;
+  ${MediaBreakpoints.sm} {
+    max-width: 175px;
+  }
 `;
 const ItemContent = styled.div`
   display: flex;
@@ -25,6 +35,9 @@ const ItemContent = styled.div`
   align-items: center;
   width: 100%;
   padding-left: 32px;
+  ${MediaBreakpoints.md} {
+    padding-left: 0;
+  }
 `;
 const ItemText = styled.div`
   display: flex;
@@ -37,6 +50,11 @@ const ItemTitle = styled.p`
 `;
 const ItemInfo = styled.p`
   ${SublineText}
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 const ItemAmount = styled.p`
   display: flex;
@@ -44,11 +62,17 @@ const ItemAmount = styled.p`
 `;
 const ItemPrice = styled.p`
   ${HeadlineTwo}
+  ${MediaBreakpoints.md} {
+    align-self: end;
+  }
 `;
 const ItemCross = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  ${MediaBreakpoints.md} {
+    align-self: start;
+  }
 `;
 const ItemPlus = styled.button`
   padding: 16px;

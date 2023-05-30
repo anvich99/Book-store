@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Search = styled.form`
   position: relative;
   display: flex;
-  width: 51%;
+  width: 60%;
 `;
 
 const InputSearch = styled(InputStyle)`
@@ -15,8 +15,8 @@ const InputSearch = styled(InputStyle)`
 `;
 const SearchBtn = styled.button`
   position: absolute;
-  top: 18px;
-  right: 44px;
+  top: 15px;
+  right: 20px;
   padding: 0;
   background-color: transparent;
   border: none;

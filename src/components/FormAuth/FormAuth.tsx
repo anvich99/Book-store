@@ -8,13 +8,11 @@ import { AuthValues } from "types";
 import { useAppDispatch } from "store";
 import { fetchSignUpUser } from "store/features/userInfo/userInfoSlice";
 
-export const FormAuth = () => {
+interface FormProps {
+  onSubmit: SubmitHandler<AuthValues>;
+}
+export const FormAuth = ({ onSubmit }: FormProps) => {
   const { register, handleSubmit } = useForm<AuthValues>();
-  const dispatch = useAppDispatch();
-
-  const onSubmit: SubmitHandler<AuthValues> = (data) => {
-    dispatch(fetchSignUpUser(data));
-  };
 
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
