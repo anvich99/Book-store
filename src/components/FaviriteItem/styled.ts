@@ -1,14 +1,8 @@
+import { StyledItem } from "components/CartItem/styled";
 import styled from "styled-components";
 import { Colors, HeadlineThree, HeadlineTwo, SublineText } from "ui";
 
-const StyledItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 49px;
-  border-bottom: 1px solid ${Colors.Secondary};
-`;
+const FavItem = styled(StyledItem)``;
 const ItemBackgroundImage = styled.div`
   display: flex;
   justify-content: center;
@@ -19,6 +13,7 @@ const ItemBackgroundImage = styled.div`
 const ItemImage = styled.img`
   max-width: 164px;
 `;
+
 const ItemContent = styled.div`
   display: flex;
   justify-content: space-between;
@@ -65,7 +60,7 @@ const AmountValue = styled.p`
   ${HeadlineThree}
 `;
 export {
-  StyledItem,
+  FavItem,
   ItemBackgroundImage,
   ItemImage,
   ItemInfo,

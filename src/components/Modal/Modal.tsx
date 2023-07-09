@@ -1,4 +1,4 @@
-import { Portal, PortalTarget } from "components/Portal/Portal";
+import { Portal, PortalTarget } from "components";
 import React from "react";
 
 interface ModalProps {
@@ -7,7 +7,7 @@ interface ModalProps {
 export const Modal = ({ handleClose }: ModalProps) => {
   return (
     <Portal target={PortalTarget.MODAL}>
-      <div className="modal" style={{ display: "block" }}>
+      <div className="modal">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">

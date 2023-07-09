@@ -1,5 +1,8 @@
 import React from "react";
+import { Template } from "templates";
 
 export const SignInPage = () => {
-  return <div>SignInPage</div>;
+  return (<Template>
+    
+  </Template>);
 };

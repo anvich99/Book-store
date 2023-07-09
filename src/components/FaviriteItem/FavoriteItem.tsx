@@ -6,7 +6,7 @@ import {
   ItemInfo,
   ItemText,
   ItemTitle,
-  StyledItem,
+  FavItem,
 } from "./styled";
 import { Book } from "types";
 import { addToFavorite, useAppDispatch } from "store";
@@ -16,7 +16,7 @@ interface FavoriteItemProps {
 }
 export const FavoriteItem = ({ favoriteItem }: FavoriteItemProps) => {
   return (
-    <StyledItem key={favoriteItem.isbn13}>
+    <FavItem key={favoriteItem.isbn13}>
       <ItemBackgroundImage>
         <ItemImage src={favoriteItem.image} alt={favoriteItem.title} />
       </ItemBackgroundImage>
@@ -28,6 +28,6 @@ export const FavoriteItem = ({ favoriteItem }: FavoriteItemProps) => {
           </ItemInfo>
         </ItemText>
       </ItemContent>
-    </StyledItem>
+    </FavItem>
   );
 };

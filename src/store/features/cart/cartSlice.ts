@@ -28,19 +28,19 @@ const cartSlice = createSlice({
     },
     removeItem: (state, { payload }) => {
       const bookIsbn = payload;
-      state.cartItems = state.cartItems.filter((item) => item.isbn13 !== bookIsbn);
+      const delBook = state.cartItems.findIndex((item) => item.isbn13 !== bookIsbn);
+      state.cartItems.splice(delBook, 1);
     },
     increase: (state, { payload }) => {
-      const cartItem = state.cartItems.find((book) => book.isbn13 === payload.isbn13);
+      state.cartItems.find((book) => book.isbn13 === payload);
     },
     decrease: (state, { payload }) => {
-      const cartItem = state.cartItems.find((book) => book.isbn13 === payload.isbn13);
+      state.cartItems.find((book) => book.isbn13 === payload);
     },
     calculateTotals: (state) => {
       let total = 0;
       state.cartItems.forEach((book) => {
         total += +book.price.substring(1);
-        console.log(book.price.substring(1));
       });
       state.total = total;
     },
@@ -49,4 +49,5 @@ const cartSlice = createSlice({
 });
 
 export default cartSlice.reducer;
-export const { addToCart, clearCart, removeItem, calculateTotals } = cartSlice.actions;
+export const { addToCart, clearCart, removeItem, calculateTotals, increase, decrease } =
+  cartSlice.actions;

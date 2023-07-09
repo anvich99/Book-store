@@ -26,6 +26,7 @@ import { Swiper } from "./Swiper/Swiper";
 import { FormAuth } from "./FormAuth/FormAuth";
 import { Modal } from "./Modal/Modal";
 import { Portal } from "./Portal/Portal";
+import { PortalTarget } from "./Portal/Portal";
 
 export {
   BookItem,
@@ -56,4 +57,5 @@ export {
   FormAuth,
   Modal,
   Portal,
+  PortalTarget,
 };
